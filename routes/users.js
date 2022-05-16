@@ -9,9 +9,9 @@ router.get('/user-list', function(req, res, next) {
     db.query(sql, function (err, data, fields) {
     if (err) throw err;
     res.render('user-list', { title: 'User List', userData: data});
-    console.log(data);
+    /*console.log(data);
     console.log(data[0]);
-    console.log(data[0].ID_USR);
+    console.log(data[0].ID_USR);*/
   });
 });
 

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Fetch using MySQL and Node.js</title>
+</head>
+<body>
+    <div class="table-data">
+<h2>Display Data using Node.js & MySQL</h2>
+    <table border="1">
+        <tr>
+            <th>Numero de ligne</th>
+            <th>ID_RDE</th>
+            <th>TPS_RDE</th>
+            <th>DATE_RDE</th>
+        </tr>
+        
+        <%
+        if(rondeData.length!=0){
+        var i=1;
+        rondeData.forEach(function(data){
+        %>
+        <tr>
+            <td><%=i; %></td>
+            <td><%=data.ID_RDE %></td>
+            <td><%=data.TPS_RDE %></td>
+            <td><%=data.DATE_RDE %></td>
+        </tr>
+        <%  i++; }) %>
+        <% } else{ %>
+            <tr>
+                <td colspan="7">No Data Found</td>
+            </tr>
+        <% } %>
+    </table>
+    </div>
+</body>
+</html>

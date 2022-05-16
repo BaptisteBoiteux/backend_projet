@@ -1,4 +1,7 @@
-//function connect () {
+if (process.env.NODE_ENV !== 'production'){
+  require('longjohn').async_trace_limit = -1;
+}
+
 var mysql = require('mysql');
 
 console.log('Get connection ...');
@@ -15,9 +18,6 @@ conn.connect(function(err) {
   if (err) throw err;
   console.log("Connected!");
 });
-
-//}
-
 
 //module.exports = { connect };
 module.exports = conn;
