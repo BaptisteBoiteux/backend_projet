@@ -1,6 +1,6 @@
-if (process.env.NODE_ENV !== 'production'){
-  require('longjohn').async_trace_limit = -1;
-}
+/*if (process.env.NODE_ENV !== 'production'){
+  require('longjohn').async_trace_limit = 1;
+}*/
 
 var mysql = require('mysql');
 
