@@ -9,9 +9,12 @@
     <table border="1">
         <tr>
             <th>Numero de ligne</th>
-            <th>ID_RDE</th>
-            <th>TPS_RDE</th>
-            <th>DATE_RDE</th>
+            <th>id</th>
+            <th>heure</th>
+            <th>temps</th>
+            <th>nb_tab</th>
+            <th>tab_presence</th>
+
         </tr>
         
         <%
@@ -21,9 +24,12 @@
         %>
         <tr>
             <td><%=i; %></td>
-            <td><%=data.ID_RDE %></td>
-            <td><%=data.TPS_RDE %></td>
-            <td><%=data.DATE_RDE %></td>
+            <td><%=data.id %></td>
+            <td><%=data.heure %></td>
+            <td><%=data.temps %></td>
+            <td><%=data.nb_tab %></td>
+            <td><%=data.tab_presence %></td>
+
         </tr>
         <%  i++; }) %>
         <% } else{ %>
